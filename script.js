@@ -1,7 +1,16 @@
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-  // Add your JavaScript code here
+// Add your custom JavaScript code here
 
-  // Example: Display a message in the console
-  console.log('Hello, GitHub Pages!');
+// Example: Play and Pause Video
+const video = document.querySelector('video');
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+    btn.textContent = 'Pause';
+  } else {
+    video.pause();
+    btn.textContent = 'Play';
+  }
 });
+

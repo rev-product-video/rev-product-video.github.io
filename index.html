@@ -103,7 +103,17 @@
     <p>Email REV at <a href="mailto:timon.gregg@jesus.ox.ac.uk">REV</a></p>
 </div>
 
-<script src="script.js" type="text/javascript"></script>
+<script>
+    const scrollToBottom = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    };
+
+    const emailButton = document.querySelector('.scroll-to-bottom');
+    emailButton.addEventListener('click', scrollToBottom);
+</script>
 </body>
 </html>
 

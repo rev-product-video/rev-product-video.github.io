@@ -13,13 +13,3 @@ btn.addEventListener('click', () => {
         btn.textContent = 'Play';
     }
 });
-
-const scrollToBottom = () => {
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-    });
-};
-
-const emailButton = document.querySelector('.scroll-to-bottom');
-emailButton.addEventListener('click', scrollToBottom);

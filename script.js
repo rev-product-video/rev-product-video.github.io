@@ -5,12 +5,21 @@ const video = document.querySelector('video');
 const btn = document.querySelector('.btn');
 
 btn.addEventListener('click', () => {
-  if (video.paused) {
-    video.play();
-    btn.textContent = 'Pause';
-  } else {
-    video.pause();
-    btn.textContent = 'Play';
-  }
+    if (video.paused) {
+        video.play();
+        btn.textContent = 'Pause';
+    } else {
+        video.pause();
+        btn.textContent = 'Play';
+    }
 });
 
+const scrollToBottom = () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+};
+
+const emailButton = document.querySelector('.scroll-to-bottom');
+emailButton.addEventListener('click', scrollToBottom);
